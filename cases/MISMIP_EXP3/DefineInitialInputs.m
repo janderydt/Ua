@@ -27,7 +27,6 @@ CtrlVar.InfoLevelNonLinIt=1;
 CtrlVar.Restart=0;  CtrlVar.WriteRestartFile=1;
 
 
-
 %% Mesh generation and remeshing parameters
 
 CtrlVar.ReadInitialMesh=0;    % if true then read FE mesh (coordinates, connectivity) directly from a .mat file
@@ -59,24 +58,24 @@ CtrlVar.AdaptMeshUntilChangeInNumberOfElementsLessThan=0;
 CtrlVar.InfoLevelAdaptiveMeshing=10;
 CtrlVar.MeshRefinementMethod='explicit:local:newest vertex bisection';
 
-I=1;
-CtrlVar.ExplicitMeshRefinementCriteria(I).Name='effective strain rates';
-CtrlVar.ExplicitMeshRefinementCriteria(I).Scale=0.01;
-CtrlVar.ExplicitMeshRefinementCriteria(I).EleMin=[];
-CtrlVar.ExplicitMeshRefinementCriteria(I).EleMax=[];
-CtrlVar.ExplicitMeshRefinementCriteria(I).p=[];
-CtrlVar.ExplicitMeshRefinementCriteria(I).InfoLevel=1;
-CtrlVar.ExplicitMeshRefinementCriteria(I).Use=false;
-
-
-I=I+1;
-CtrlVar.ExplicitMeshRefinementCriteria(I).Name='effective strain rates gradient';
-CtrlVar.ExplicitMeshRefinementCriteria(I).Scale=0.001/1000;
-CtrlVar.ExplicitMeshRefinementCriteria(I).EleMin=[];
-CtrlVar.ExplicitMeshRefinementCriteria(I).EleMax=[];
-CtrlVar.ExplicitMeshRefinementCriteria(I).p=[];'Ua2D_Restartfile.mat'
-CtrlVar.ExplicitMeshRefinementCriteria(I).InfoLevel=1;
-CtrlVar.ExplicitMeshRefinementCriteria(I).Use=true;
+% I=1;
+% CtrlVar.ExplicitMeshRefinementCriteria(I).Name='effective strain rates';
+% CtrlVar.ExplicitMeshRefinementCriteria(I).Scale=0.01;
+% CtrlVar.ExplicitMeshRefinementCriteria(I).EleMin=[];
+% CtrlVar.ExplicitMeshRefinementCriteria(I).EleMax=[];
+% CtrlVar.ExplicitMeshRefinementCriteria(I).p=[];
+% CtrlVar.ExplicitMeshRefinementCriteria(I).InfoLevel=1;
+% CtrlVar.ExplicitMeshRefinementCriteria(I).Use=false;
+% 
+% 
+% I=I+1;
+% CtrlVar.ExplicitMeshRefinementCriteria(I).Name='effective strain rates gradient';
+% CtrlVar.ExplicitMeshRefinementCriteria(I).Scale=0.001/1000;
+% CtrlVar.ExplicitMeshRefinementCriteria(I).EleMin=[];
+% CtrlVar.ExplicitMeshRefinementCriteria(I).EleMax=[];
+% CtrlVar.ExplicitMeshRefinementCriteria(I).p=[];'Ua2D_Restartfile.mat'
+% CtrlVar.ExplicitMeshRefinementCriteria(I).InfoLevel=1;
+% CtrlVar.ExplicitMeshRefinementCriteria(I).Use=true;
 
 
 CtrlVar.MeshAdapt.GLrange=[10000 1250 ; 2000 500];                                                    
